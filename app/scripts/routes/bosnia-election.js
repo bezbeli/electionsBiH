@@ -26,7 +26,12 @@ Electionsbih.Routers = Electionsbih.Routers || {};
             }
         ],
         years = [
-            
+            {
+                val: 2010
+            },
+            {
+                val: 2014
+            }
         ],
         electionType = ['parliament_bih','parliament_fbih','parliament_rs','kanton']
         ,

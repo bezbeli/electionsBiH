@@ -63,18 +63,7 @@
         </script>
 
         <script type="text/template" id="election-year-template">
-        <ul class="nav nav-pills">
-            <% _.each(navs, function(nav) { %>
-            <% var title = nav['val']; %>
-            <% var c = '' %>
-            <% if ( state['year'] == nav['val'] ) { c = 'active'} %>
-                <li class="<%= c %>" >
-                    <a href="<%= '/#' + state['lang'] + '/' + nav['val'] + '/'
-                    + state['type'] %>" >
-                        <%= title %></a>
-                </li>
-            <% }); %>
-        </ul>
+        
         </script>
 
         <script type="text/template" id="results-template">
