@@ -7,8 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link href="https://api.tiles.mapbox.com/mapbox.js/v2.1.0/mapbox.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles/d2746a43.main.css">
+        <link href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles/433fa44b.main.css">
         <script src="scripts/vendor/a8bcb0b6.modernizr.js"></script>
     </head>
     <body>
@@ -22,10 +22,10 @@
                 <div id="toggle-language"></div>
             </div>
             <div id="toggle-election"></div>
-            <div class="border" id="toggle-year"></div>
-            <div class="row border">
+            <div id="toggle-year"></div>
+            <div class="row">
                 <div class="col-sm-3 col-md-2" id="party-select"></div>
-                <div class="col-sm-6 col-md-7 map" id="map"></div>
+                <div class="col-sm-6 col-md-7 mapa" id="mapa"></div>
                 <div class="col-sm-3 col-md-3" id="results-display"></div>
             </div>
         </div>
@@ -45,7 +45,7 @@
         </script>
 
         <script type="text/template" id="election-type-template">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-pills">
             <% _.each(navs, function(nav) { %>
             <% var title = translate(nav); %>
             <% var c = '' %>
@@ -54,21 +54,11 @@
             state['year'] + '/' + nav %>" ><%= title %></a></li>
             <% }); %>
         </ul>
+        <hr>
         </script>
 
         <script type="text/template" id="election-year-template">
-        <ul class="nav nav-pills">
-            <% _.each(navs, function(nav) { %>
-            <% var title = nav['val']; %>
-            <% var c = '' %>
-            <% if ( state['year'] == nav['val'] ) { c = 'active'} %>
-                <li class="<%= c %>" >
-                    <a href="<%= '/#' + state['lang'] + '/' + nav['val'] + '/'
-                    + state['type'] %>" >
-                        <%= title %></a>
-                </li>
-            <% }); %>
-        </ul>
+        
         </script>
 
         <script type="text/template" id="results-template">
@@ -84,7 +74,7 @@
             <tr><td><%= ps.abbreviation %></td><td><%= ps.seats %> <%= ps.comp %></td><td><%= ps.per %></td></tr>
             <% }); %>
             </table>
-            <a class="btn btn-primary" target="_new"
+            <a class="btn btn-sm btn-block btn-default" target="_new"
             href="https://github.com/Zastone/electionsBiH/tree/master/Cleaned%20Data">
                 <%= translate("Download Data") %></a>
         </script>
@@ -99,8 +89,8 @@
                     <%= party['abbreviation'] %></li>
                 <%    }) %>
             </ul>
-            <button class="btn btn-default sl-all" type="button">Select all</button>
-            <button class="btn btn-default unsl-all" type="button">Unselect all</button>
+            <button class="btn btn-sm btn-default sl-all" type="button">Select all</button>
+            <button class="btn btn-sm btn-default unsl-all" type="button">Unselect all</button>
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -115,8 +105,8 @@
 
         <script src="scripts/bea76884.vendor.js"></script>
 
-        <script src="https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js"></script>
+        <script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
 
-        <script src="scripts/e9467121.main.js"></script>
+        <script src="scripts/06ddbe82.main.js"></script>
 </body>
 </html>
