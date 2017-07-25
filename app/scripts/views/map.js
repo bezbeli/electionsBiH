@@ -47,7 +47,7 @@ Electionsbih.Views = Electionsbih.Views || {};
                     style: function(feature) {
                         return {
                             className: cn,
-                            color: '#ccc',
+                            color: '#999',
                             opacity: 0.7,
                             fillColor: '#555',
                             fillOpacity: 0.4,
@@ -75,7 +75,7 @@ Electionsbih.Views = Electionsbih.Views || {};
                     }
                     else {
                       this.setStyle({
-                        color: '#dc3',
+                        color: '#FFF',
                         weight: 3
                       });
                       that.selected = this.options.style().className;

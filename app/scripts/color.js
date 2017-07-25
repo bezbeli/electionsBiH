@@ -2,7 +2,7 @@ var color = function (abbrev) {
   var r = "#999";
   switch (abbrev) {
     case "СНСД МД":
-      r = "#af251b";
+      r = "#720003";
       break;
     case "SDP BiH":
       r = "#de0023";

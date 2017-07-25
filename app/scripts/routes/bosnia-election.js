@@ -92,15 +92,25 @@ Electionsbih.Routers = Electionsbih.Routers || {};
         init = true;
     }
 
-    L.mapbox.accessToken = 'pk.eyJ1IjoiZGV2c2VlZCIsImEiOiJnUi1mbkVvIn0.018aLhX0Mb0tdtaT2QNe2Q';
-    Electionsbih.map = L.mapbox.map('map', 'devseed.31eaf6e2')
-                        .setView([44, 18], 7)
+    L.mapbox.accessToken = 'pk.eyJ1IjoiYmV6YmVsaSIsImEiOiJjajVqYXI1Y28yZGtwMndremliZmF2ZXM5In0.cE9AM2jrkeJ4ESrXFX-Pfw';
+    Electionsbih.map = L.mapbox.map('mapa', null, {
+        zoomControl: true,
+        dragging:true,
+        touchZoom:false,
+        doubleClickZoom:false,
+        scrollWheelZoom:false,
+        keyboard:false,
+        })
+        .setView([44, 18], 7);
+
+    L.mapbox.styleLayer('mapbox://styles/bezbeli/cj5jfp9zb0let2smtspw9cqyj').addTo(Electionsbih.map);
 
     Electionsbih.Routers.BosniaElection = Backbone.Router.extend({
         routes: {
             ''                              : 'newload',
             ':language/:year/:election'     : 'newfilter'
         },
+
         newload: function() {
             state['year'] = 2010;
             state['type'] = 'parliament_bih';

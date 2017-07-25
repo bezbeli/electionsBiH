@@ -83,9 +83,9 @@ Electionsbih.Views = Electionsbih.Views || {};
                    var per = (y['votes']/muniVotes * 100).toFixed(2);
                    if ((partyStatus === 0 || _.contains(activeParties,y['abbreviation'])) && _.contains(_.pluck(partySeats,'abbreviation'),y['abbreviation'])) {
                      circles.push(L.circleMarker([coord[1]+jiggle*Math.sin((i*2*Math.PI)/3),coord[0]+jiggle*Math.cos((i*2*Math.PI)/3)], {
-                            radius: Math.sqrt(y['votes']) / 10,
+                            radius: Math.sqrt(y['votes']) / 8,
                             weight: 0.5,
-                            color: 'white',
+                            color: 'black',
                             opacity: 1,
                             fillColor: color(y['abbreviation']),
                             fillOpacity: 1,
