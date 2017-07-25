@@ -201,7 +201,7 @@ module.exports = function (grunt) {
                         'data/translations/*.{json,po}',
                         '*.{ico,txt,png,xml}',
                         '.htaccess',
-                        'images/{,*/}*.{webp,gif}',
+                        'images/{,*/}*.{webp,gif,svg}',
                         'styles/fonts/{,*/}*.*'
                     ]
                 }]
