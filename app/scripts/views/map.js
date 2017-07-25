@@ -19,7 +19,7 @@ Electionsbih.Views = Electionsbih.Views || {};
               _.each(this.layers, function(x) {
               Electionsbih.map.removeLayer(x);
             })}
-            Electionsbih.map.setView([44, 18], 7)
+            Electionsbih.map.setView([44, 17.65], 8)
             var electoral_units = _.unique(_.flatten(
                 _.map(this.collection.models, function(d) {
                     return _.pluck(d.get("electoral_units"),"id");
@@ -68,7 +68,7 @@ Electionsbih.Views = Electionsbih.Views || {};
                       });
                     }
                     if (that.selected == this.options.style().className){
-                      Electionsbih.map.setView([44, 18], 7);
+                      Electionsbih.map.setView([44, 17.65], 8);
                       that.selected = 0;
                       Electionsbih.resultsDisplay.render('country')
                       Electionsbih.partySelect.render('country')

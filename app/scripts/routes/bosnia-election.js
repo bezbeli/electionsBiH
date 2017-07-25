@@ -101,9 +101,9 @@ Electionsbih.Routers = Electionsbih.Routers || {};
         scrollWheelZoom:false,
         keyboard:false,
         })
-        .setView([44, 18], 7);
+        .setView([44, 17.65], 7.5);
 
-    L.mapbox.styleLayer('mapbox://styles/bezbeli/cj5jfp9zb0let2smtspw9cqyj').addTo(Electionsbih.map);
+    L.mapbox.styleLayer('mapbox://styles/bezbeli/cj5jhwwgr0nfo2rmtlt0r827c').addTo(Electionsbih.map);
 
     Electionsbih.Routers.BosniaElection = Backbone.Router.extend({
         routes: {

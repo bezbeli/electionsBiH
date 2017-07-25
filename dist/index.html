@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link href="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css" rel="stylesheet">
-        <link rel="stylesheet" href="styles/433fa44b.main.css">
+        <link rel="stylesheet" href="styles/40ce789d.main.css">
         <script src="scripts/vendor/a8bcb0b6.modernizr.js"></script>
     </head>
     <body>
@@ -17,17 +17,27 @@
         <![endif]-->
 
         <div class="container-fluid">
+            
             <div class="header">
                 <h1>Izborni rezultati</h1>
-                <div id="toggle-language"></div>
             </div>
+            
+            <div id="toggle-language"></div>
             <div id="toggle-election"></div>
             <div id="toggle-year"></div>
+
             <div class="row">
-                <div class="col-sm-3 col-md-2" id="party-select"></div>
-                <div class="col-sm-6 col-md-7 mapa" id="mapa"></div>
-                <div class="col-sm-3 col-md-3" id="results-display"></div>
+                <div class="col-sm-3 col-md-2 stranke">
+                    <div id="party-select"></div>
+                </div>
+                <div class="col-sm-6 col-md-7">
+                    <div class="mapa" id="mapa"></div>
+                </div>
+                <div class="col-sm-3 col-md-3 rezultati">
+                    <div id="results-display"></div>
+                </div>
             </div>
+
         </div>
 
         <script type="text/template" id="language-template">
@@ -80,7 +90,14 @@
         </script>
 
         <script type="text/template" id="party-select-template">
+
             <h1><%= translate("Parties") %></h1>
+
+            <button class="btn btn-sm btn-default sl-all" type="button">Select all</button>
+            <button class="btn btn-sm btn-default unsl-all" type="button">Unselect all</button>
+            
+            <hr>
+            
             <ul class="party-select">
                 <% _.each(parties, function(party) { %>
                 <% var bck = color(party['abbreviation']) %>
@@ -89,8 +106,7 @@
                     <%= party['abbreviation'] %></li>
                 <%    }) %>
             </ul>
-            <button class="btn btn-sm btn-default sl-all" type="button">Select all</button>
-            <button class="btn btn-sm btn-default unsl-all" type="button">Unselect all</button>
+
         </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -107,6 +123,6 @@
 
         <script src="https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js"></script>
 
-        <script src="scripts/06ddbe82.main.js"></script>
+        <script src="scripts/946e817b.main.js"></script>
 </body>
 </html>
