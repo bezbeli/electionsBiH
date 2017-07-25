@@ -5,45 +5,56 @@ body {
 
 .map {
     height: 500px;
-    }
+}
+
 .border {
     border-right: 1px solid #DDD;
     border-left: 1px solid #DDD;
     margin-left: 0;
     margin-right: 0;
-    }
+}
+
 .border.row {
     padding-bottom: 5px;
     border-bottom: 1px solid #DDD;
-    }
+}
 
 .row h1 {
     font-size: 2em;
-    }
+}
+
 .row h2 {
     font-size: 1.5em;
-    }
-.row h1, .row h2 {
+}
+
+.row h1,
+.row h2 {
     border-bottom: 1px solid #333;
     margin-top: 5px;
-    }
+}
+
 .party-select {
     list-style: none;
     padding: 0;
-    }
+}
 
 .party-select li {
-    border: 1px solid #333;
-    border-radius: 4px;
+    border-radius: 0px;
     width: 100%;
     margin-bottom: 2px;
     overflow: hidden;
-    }
+    background-color: #F2F2F2;
+}
 
 .party-select a {
     color: #333;
+    background-color: #F2F2F2;
     text-decoration: none;
-    }
+}
+
+.party-select a:hover {
+    cursor: pointer;
+}
 
 .party-select .indicator {
     display: inline-block;
@@ -51,43 +62,44 @@ body {
     border-right: 1px solid #333;
     height: 2em;
     vertical-align: middle;
-    }
+}
 
-.party-select li.inactive .indicator{
+.party-select li.inactive .indicator {
     background-color: white !important;
-    }
+}
 
 .party-select li:hover {
     background: #EEE;
-    }
+}
 
- .header h1 {
+.header h1 {
     display: inline-block;
-    }
+}
 
- #toggle-language {
+#toggle-language {
     display: inline-block;
     float: right;
     margin-top: 10px;
-    }
+}
 
 #toggle-year {
     padding-left: 5px;
     padding-top: 5px;
-    }
+}
 
 .circles {
-  z-index: 100000;
+    z-index: 100000;
 }
 
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
     background: white;
-    background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
+
 .info h4 {
     margin: 0 0 5px;
     color: #777;

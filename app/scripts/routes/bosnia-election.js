@@ -13,25 +13,20 @@ Electionsbih.Routers = Electionsbih.Routers || {};
                 val: 'en'
             },
             {
-                display: 'Bosnian',
+                display: 'bosanski',
                 val: 'bs'
             },
             {
-                display: 'Croatian',
+                display: 'hrvatski',
                 val: 'hr'
             },
             {
-                display: 'Serbian',
+                display: 'srpski',
                 val: 'sr'
             }
         ],
         years = [
-            {
-                val: 2010
-            },
-            {
-                val: 2014
-            }
+            
         ],
         electionType = ['parliament_bih','parliament_fbih','parliament_rs','kanton']
         ,
