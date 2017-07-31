@@ -3,6 +3,12 @@ body {
     font-size: 12px;
 }
 
+.banner{
+    background: #000;
+    padding: 2em;
+    margin-bottom:2em;
+}
+
 .mapa,.stranke,.rezultati {
     height: 750px;
     overflow: auto;
